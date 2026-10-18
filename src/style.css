@@ -152,10 +152,10 @@ button, input, select, textarea {
   outline-offset: 3px;
 }
 
-/* Layout Containers */
+/* Layout Containers: Fluid 92-95% viewport width on desktop capped around 1800px */
 .container {
   width: 100%;
-  max-width: 1240px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.25rem;
@@ -166,6 +166,15 @@ button, input, select, textarea {
   .container {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 94%;
+    max-width: 1800px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
@@ -772,27 +781,42 @@ button, input, select, textarea {
    3. HERO SECTION
    ========================================================================== */
 .hero-section {
-  padding: 3.5rem 0 4.5rem;
-  background: linear-gradient(180deg, rgba(244, 239, 232, 0.4) 0%, var(--bg-canvas) 100%);
+  padding: 2.5rem 0 3.25rem;
+  background-color: var(--bg-canvas);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(181, 133, 52, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(29, 61, 47, 0.06) 0%, transparent 45%),
+    linear-gradient(to right, rgba(18, 23, 21, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(18, 23, 21, 0.035) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+  border-bottom: 1px solid var(--border-hairline);
   position: relative;
 }
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 2rem 0 3rem;
+    padding: 1.75rem 0 2.25rem;
   }
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
-  align-items: center;
+  gap: 2rem;
+  align-items: start;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 992px) {
   .hero-grid {
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.75rem;
+    align-items: start;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-grid {
+    grid-template-columns: 1.05fr 0.95fr;
     gap: 3.5rem;
   }
 }
@@ -800,7 +824,8 @@ button, input, select, textarea {
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.15rem;
+  max-width: 680px;
 }
 
 .hero-eyebrow-row {
@@ -898,6 +923,7 @@ button, input, select, textarea {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .visual-header {
@@ -939,7 +965,7 @@ button, input, select, textarea {
 
 .canvas-container {
   width: 100%;
-  height: 380px;
+  height: 350px;
   position: relative;
   background: radial-gradient(circle at center, #F4EFE8 0%, #E8E2D6 100%);
   display: flex;
@@ -950,7 +976,7 @@ button, input, select, textarea {
 
 @media (max-width: 640px) {
   .canvas-container {
-    height: 320px;
+    height: 300px;
   }
 }
 
@@ -1075,6 +1101,15 @@ button, input, select, textarea {
   gap: 1.25rem;
 }
 
+@media (min-width: 1280px) {
+  .hero-showcase-container {
+    display: grid;
+    grid-template-columns: 1.12fr 0.88fr;
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+}
+
 /* Dedicated Product Photo Area */
 .hero-product-photo-card {
   background: var(--bg-surface);
@@ -1084,6 +1119,7 @@ button, input, select, textarea {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .photo-card-topbar {
@@ -1124,6 +1160,13 @@ button, input, select, textarea {
 
 .hero-photo-slot {
   min-height: 200px;
+  flex: 1;
+}
+
+@media (min-width: 1280px) {
+  .hero-photo-slot {
+    min-height: 220px;
+  }
 }
 
 .placeholder-technical-pattern {
@@ -1211,65 +1254,130 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
-   3. CLAMPS SPECIALIZATION & GALLERY SECTION
+   4. BRAND MOTTO & HARDWARE STANDARDS SECTION (Full-Width Edge Band)
+   ========================================================================== */
+.motto-standards-section {
+  background-color: var(--bg-dark-slate);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(181, 133, 52, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 85% 50%, rgba(29, 61, 47, 0.12) 0%, transparent 50%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  border-top: 2px solid var(--accent-brass);
+  border-bottom: 1px solid var(--border-dark);
+  padding: 3.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .motto-standards-section {
+    padding: 2.5rem 0;
+  }
+}
+
+.motto-standards-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.motto-banner-headline-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-width: 980px;
+}
+
+.motto-main-phrase {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.4vw, 2.75rem);
+  font-weight: 700;
+  font-style: italic;
+  color: #FDFCF9;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+.motto-subtext {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #B5C4BC;
+  max-width: 780px;
+}
+
+.motto-standards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .motto-standards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.motto-card {
+  background: var(--bg-dark-card);
+  border: 1px solid var(--border-dark);
+  border-top: 3px solid var(--accent-brass);
+  border-radius: var(--radius-sm);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.motto-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(181, 133, 52, 0.5);
+}
+
+.motto-card-num {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-brass);
+  letter-spacing: 0.08em;
+}
+
+.motto-card-title {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+}
+
+.motto-card-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #A3B3AA;
+}
+
+/* ==========================================================================
+   5. CLAMPS SPECIALIZATION & GALLERY SECTION
    ========================================================================== */
 .clamps-section {
   background-color: var(--bg-canvas);
 }
 
-.clamps-features-grid {
+.clamps-overview-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
-  margin-bottom: 2rem;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
-@media (min-width: 768px) {
-  .clamps-features-grid {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 1024px) {
+  .clamps-overview-grid {
+    grid-template-columns: 1.35fr 0.65fr;
+    align-items: stretch;
   }
-}
-
-.clamp-feature-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  box-shadow: var(--shadow-sm);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.clamp-feature-card:hover {
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-md);
-}
-
-.feature-icon-box {
-  width: 2.75rem;
-  height: 2.75rem;
-  background: var(--bg-surface-warm);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent-forest);
-}
-
-.feature-card-title {
-  font-family: var(--font-sans);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.feature-card-desc {
-  font-size: 0.8875rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
 }
 
 /* Schematic Elevation Banner */
@@ -1282,14 +1390,89 @@ button, input, select, textarea {
   grid-template-columns: 1fr;
   gap: 2rem;
   align-items: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0;
 }
 
 @media (min-width: 860px) {
   .clamps-schematic-banner {
     grid-template-columns: 1.2fr 0.8fr;
-    padding: 2.5rem;
+    padding: 2.25rem;
   }
+}
+
+/* Availability & Stock Card in Clamps Overview */
+.clamps-availability-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+}
+
+.card-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  background: var(--bg-surface-warm);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.highlight-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-brass-hover);
+  letter-spacing: 0.05em;
+}
+
+.spec-code {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.availability-card-body {
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.product-icon-wrap {
+  width: 2.75rem;
+  height: 2.75rem;
+  background: var(--accent-forest-light);
+  border: 1px solid rgba(29, 61, 47, 0.15);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-forest);
+}
+
+.availability-card-title {
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.availability-card-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.availability-card-actions {
+  padding-top: 0.75rem;
 }
 
 .schematic-banner-text {
@@ -1498,6 +1681,13 @@ button, input, select, textarea {
   }
 }
 
+@media (min-width: 1400px) {
+  .about-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4.5rem;
+  }
+}
+
 .about-narrative {
   display: flex;
   flex-direction: column;
@@ -1505,6 +1695,7 @@ button, input, select, textarea {
   font-size: 1rem;
   line-height: 1.68;
   color: var(--text-secondary);
+  max-width: 760px;
 }
 
 .about-lead-p {
@@ -1653,7 +1844,7 @@ button, input, select, textarea {
 }
 
 .review-container {
-  max-width: 860px;
+  max-width: 1040px;
 }
 
 .single-review-card {
@@ -1694,6 +1885,7 @@ button, input, select, textarea {
   margin-bottom: 2rem;
   position: relative;
   z-index: 2;
+  max-width: 860px;
 }
 
 .review-attribution-bar {
@@ -1771,9 +1963,9 @@ button, input, select, textarea {
 
 @media (min-width: 900px) {
   .visit-grid {
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
-    align-items: start;
+    align-items: stretch;
   }
 }
 
@@ -1786,6 +1978,7 @@ button, input, select, textarea {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  height: 100%;
 }
 
 @media (min-width: 640px) {
@@ -1911,6 +2104,7 @@ button, input, select, textarea {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .map-header {
@@ -1954,6 +2148,13 @@ button, input, select, textarea {
   position: relative;
   background: #E8E4DC;
   overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .map-canvas-frame {
+    height: 280px;
+    flex-grow: 1;
+  }
 }
 
 .map-graphic-canvas {
@@ -2050,6 +2251,13 @@ button, input, select, textarea {
   }
 }
 
+@media (min-width: 1200px) {
+  .footer-main-grid {
+    grid-template-columns: 1.7fr 0.8fr 1.3fr;
+    gap: 4.5rem;
+  }
+}
+
 .footer-brand-column {
   display: flex;
   flex-direction: column;
@@ -2074,7 +2282,7 @@ button, input, select, textarea {
   font-size: 0.875rem;
   line-height: 1.6;
   color: var(--text-light-muted);
-  max-width: 380px;
+  max-width: 480px;
 }
 
 .footer-tel-link {

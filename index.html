@@ -25,7 +25,7 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="./src/style.css">
 
-  <!-- Schema.org Structured Data (City-level locality without duplicating full street address) -->
+  <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -212,7 +212,7 @@
             Bhavani Traders supplies heavy-duty clamps focused on lasting reliability and resistance to early rusting.
           </p>
 
-          <!-- Required Brand Motto Banner -->
+          <!-- Required Brand Motto Callout -->
           <div class="hero-motto-callout" role="note" aria-label="Brand motto">
             <div class="motto-accent-bar" aria-hidden="true"></div>
             <div class="motto-body">
@@ -221,7 +221,7 @@
             </div>
           </div>
 
-          <!-- Required Buttons: Call to enquire & Get directions -->
+          <!-- Required Actions: Call to enquire & Get directions -->
           <div class="hero-actions">
             <a href="tel:+919445117929" class="btn-primary" aria-label="Call Bhavani Traders to enquire at 094451 17929">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
@@ -238,7 +238,7 @@
             </a>
           </div>
 
-          <!-- Structured Quick Facts: Location described only as Chennai -->
+          <!-- Quick Fact Matrix: Location only as Chennai -->
           <div class="hero-fact-strip" role="list" aria-label="Store details summary">
             <div class="fact-card" role="listitem">
               <span class="fact-caption">Business Role</span>
@@ -259,9 +259,9 @@
           </div>
         </div>
 
-        <!-- HERO SHOWCASE: Interactive 3D Clamp + Dedicated Product Photo Area -->
+        <!-- HERO SHOWCASE: 3D Clamp Viewer + Dedicated Product Photo Area -->
         <div class="hero-showcase-container">
-          <!-- Interactive 3D Clamp Specimen Card -->
+          <!-- 1. Interactive 3D Clamp Specimen Card -->
           <div class="hero-visual-card" aria-label="Interactive 3D Hardware Display">
             <div class="visual-header">
               <div class="visual-badge-group">
@@ -296,7 +296,7 @@
             </p>
           </div>
 
-          <!-- Product Photo Area for future photo -->
+          <!-- 2. Product Photo Area for actual photo -->
           <!-- USER PHOTO PLACEHOLDER (HERO): Replace the inner .photo-placeholder-slot with <img src="./path/to/hero-product.jpg" alt="Bhavani Traders Heavy-Duty Clamp" class="product-photo-img"> when provided -->
           <div class="hero-product-photo-card" aria-label="Product Photo Area">
             <div class="photo-card-topbar">
@@ -328,7 +328,50 @@
       </div>
     </section>
 
-    <!-- 3. CLAMPS SECTION -->
+    <!-- 3. BRAND MOTTO & HARDWARE PRINCIPLES SECTION (Well-aligned full-width banner) -->
+    <section class="motto-standards-section" aria-labelledby="motto-heading">
+      <div class="container">
+        <div class="motto-standards-banner">
+          <div class="motto-banner-headline-block">
+            <span class="technical-chip">CORE PRODUCT PRINCIPLE</span>
+            <h2 id="motto-heading" class="motto-main-phrase">
+              “Built for lasting reliability. Designed to resist rust.”
+            </h2>
+            <p class="motto-subtext">
+              Bhavani Traders supplies heavy-duty clamps intended for long-term dependable workholding and resistance to early rusting under rigorous workshop and construction conditions.
+            </p>
+          </div>
+
+          <div class="motto-standards-grid">
+            <div class="motto-card">
+              <div class="motto-card-num">01</div>
+              <h3 class="motto-card-title">Lasting Reliability</h3>
+              <p class="motto-card-desc">
+                Heavy-gauge frame and sturdy construction designed to maintain firm hold across repeated industrial and carpentry use.
+              </p>
+            </div>
+
+            <div class="motto-card">
+              <div class="motto-card-num">02</div>
+              <h3 class="motto-card-title">Early Rust Resistance</h3>
+              <p class="motto-card-desc">
+                Supplied to resist early oxidation and environmental humidity, preserving threading and swivel performance.
+              </p>
+            </div>
+
+            <div class="motto-card">
+              <div class="motto-card-num">03</div>
+              <h3 class="motto-card-title">Direct Storefront Availability</h3>
+              <p class="motto-card-desc">
+                Check clamp stock and sizes by telephone at 094451 17929, with direct local pickup from our Chennai store.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CLAMPS SECTION: Clamps as main focus, dependable & rust resistant, prompt to call, photo gallery placeholders -->
     <section class="section-block clamps-section" id="clamps" aria-labelledby="clamps-heading">
       <div class="container">
         <!-- Section Header -->
@@ -345,93 +388,80 @@
           </p>
         </div>
 
-        <!-- Clamps Feature Grid -->
-        <div class="clamps-features-grid">
-          <div class="clamp-feature-card">
-            <div class="feature-icon-box" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        <!-- Upper Overview Grid: Technical Elevation Blueprint + Stock Confirmation Card -->
+        <div class="clamps-overview-grid">
+          <!-- Technical Elevation Blueprint Schematic -->
+          <div class="clamps-schematic-banner">
+            <div class="schematic-banner-text">
+              <span class="technical-chip">TECHNICAL SPECIFICATION ELEVATION</span>
+              <h3 class="schematic-banner-headline">Engineered Clamping Anatomy</h3>
+              <p class="schematic-banner-desc">
+                Heavy structural spine with threaded steel spindle and swivel pressure pad, supplied for firm hold and resistance to early rusting.
+              </p>
+              <div class="schematic-call-cta">
+                <a href="tel:+919445117929" class="btn-primary" aria-label="Call store to confirm clamp availability: 094451 17929">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <span>Call 094451 17929 to confirm availability</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="schematic-banner-graphic" aria-label="Technical line schematic of heavy-duty C-clamp">
+              <svg class="blueprint-svg" viewBox="0 0 360 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Engineering elevation drawing of heavy clamp">
+                <line x1="20" y1="130" x2="340" y2="130" stroke="#25352C" stroke-dasharray="3 3" stroke-width="1"/>
+                <line x1="180" y1="15" x2="180" y2="245" stroke="#25352C" stroke-dasharray="3 3" stroke-width="1"/>
+                <line x1="65" y1="40" x2="65" y2="215" stroke="#B58534" stroke-width="1.2"/>
+                <polyline points="61,48 65,40 69,48" stroke="#B58534" stroke-width="1.2"/>
+                <polyline points="61,207 65,215 69,207" stroke="#B58534" stroke-width="1.2"/>
+                <text x="42" y="134" fill="#B58534" font-family="'JetBrains Mono', monospace" font-size="8.5" transform="rotate(-90 42 134)">HEAVY GAUGE</text>
+                <path d="M 230 55 L 140 55 C 95 55 85 90 85 130 C 85 175 95 210 140 210 L 230 210 L 230 185 L 150 185 C 120 185 115 160 115 130 C 115 100 120 75 150 75 L 230 75 Z" fill="rgba(29, 61, 47, 0.45)" stroke="#72B58F" stroke-width="2" stroke-linejoin="round"/>
+                <rect x="208" y="55" width="30" height="22" fill="#2E4439" stroke="#9AD6B3" stroke-width="1.5"/>
+                <rect x="208" y="185" width="30" height="28" fill="#2E4439" stroke="#9AD6B3" stroke-width="1.5"/>
+                <rect x="216" y="105" width="14" height="110" fill="#B58534" stroke="#E5BE6C" stroke-width="1.5"/>
+                <line x1="216" y1="118" x2="230" y2="120" stroke="#FFFFFF" stroke-width="1"/>
+                <line x1="216" y1="130" x2="230" y2="132" stroke="#FFFFFF" stroke-width="1"/>
+                <line x1="216" y1="142" x2="230" y2="144" stroke="#FFFFFF" stroke-width="1"/>
+                <line x1="216" y1="154" x2="230" y2="156" stroke="#FFFFFF" stroke-width="1"/>
+                <ellipse cx="223" cy="101" rx="12" ry="4" fill="#D3DED8" stroke="#FFFFFF" stroke-width="1.5"/>
+                <line x1="175" y1="230" x2="270" y2="230" stroke="#E0EBE4" stroke-width="3.5" stroke-linecap="round"/>
+                <circle cx="175" cy="230" r="3.5" fill="#B58534"/>
+                <circle cx="270" cy="230" r="3.5" fill="#B58534"/>
+                <line x1="235" y1="101" x2="275" y2="88" stroke="#72B58F" stroke-width="1"/>
+                <text x="280" y="91" fill="#9AD6B3" font-family="'JetBrains Mono', monospace" font-size="8">Swivel Pad</text>
+                <line x1="230" y1="144" x2="275" y2="144" stroke="#72B58F" stroke-width="1"/>
+                <text x="280" y="147" fill="#9AD6B3" font-family="'JetBrains Mono', monospace" font-size="8">Steel Spindle</text>
               </svg>
             </div>
-            <h3 class="feature-card-title">Lasting Reliability</h3>
-            <p class="feature-card-desc">
-              Constructed with solid gauge and thickness for firm, dependable workholding across carpentry, metalworking, and structural fabrication projects.
-            </p>
           </div>
 
-          <div class="clamp-feature-card">
-            <div class="feature-icon-box" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M12 6v6l4 2"></path>
-              </svg>
+          <!-- Stock & Availability Card -->
+          <div class="clamps-availability-card">
+            <div class="card-status-bar">
+              <span class="highlight-tag">Storefront Stock</span>
+              <span class="spec-code">CHENNAI</span>
             </div>
-            <h3 class="feature-card-title">Designed to Resist Rust</h3>
-            <p class="feature-card-desc">
-              Supplied to resist early rusting and environmental wear, supporting long-term, repeated use in active jobsites and workshop conditions.
-            </p>
-          </div>
-
-          <div class="clamp-feature-card">
-            <div class="feature-icon-box" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-            </div>
-            <h3 class="feature-card-title">Direct Stock Confirmation</h3>
-            <p class="feature-card-desc">
-              Contact Bhavani Traders directly to verify available clamp throat depths, spindle gauges, and in-store stock quantities before visiting.
-            </p>
-          </div>
-        </div>
-
-        <!-- Technical Elevation Schematic -->
-        <div class="clamps-schematic-banner">
-          <div class="schematic-banner-text">
-            <span class="technical-chip">TECHNICAL SPECIFICATION ELEVATION</span>
-            <h3 class="schematic-banner-headline">Engineered Clamping Anatomy</h3>
-            <p class="schematic-banner-desc">
-              Heavy structural spine with threaded steel spindle and swivel pressure pad, supplied for firm hold and resistance to early rusting.
-            </p>
-            <div class="schematic-call-cta">
-              <a href="tel:+919445117929" class="btn-primary" aria-label="Call store to confirm clamp availability: 094451 17929">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <div class="availability-card-body">
+              <div class="product-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                 </svg>
-                <span>Call 094451 17929 to confirm availability</span>
-              </a>
+              </div>
+              <h3 class="availability-card-title">Check Clamp Sizing</h3>
+              <p class="availability-card-text">
+                To confirm specific clamp jaw openings, throat depths, and current in-store quantities, call Bhavani Traders directly prior to visiting our store in Chennai.
+              </p>
+              <div class="availability-card-actions">
+                <a href="tel:+919445117929" class="btn-primary" style="width: 100%; justify-content: center;">
+                  <span>Call 094451 17929</span>
+                </a>
+              </div>
             </div>
-          </div>
-
-          <div class="schematic-banner-graphic" aria-label="Technical line schematic of heavy-duty C-clamp">
-            <svg class="blueprint-svg" viewBox="0 0 360 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Engineering elevation drawing of heavy clamp">
-              <line x1="20" y1="130" x2="340" y2="130" stroke="#25352C" stroke-dasharray="3 3" stroke-width="1"/>
-              <line x1="180" y1="15" x2="180" y2="245" stroke="#25352C" stroke-dasharray="3 3" stroke-width="1"/>
-              <line x1="65" y1="40" x2="65" y2="215" stroke="#B58534" stroke-width="1.2"/>
-              <polyline points="61,48 65,40 69,48" stroke="#B58534" stroke-width="1.2"/>
-              <polyline points="61,207 65,215 69,207" stroke="#B58534" stroke-width="1.2"/>
-              <text x="42" y="134" fill="#B58534" font-family="'JetBrains Mono', monospace" font-size="8.5" transform="rotate(-90 42 134)">HEAVY GAUGE</text>
-              <path d="M 230 55 L 140 55 C 95 55 85 90 85 130 C 85 175 95 210 140 210 L 230 210 L 230 185 L 150 185 C 120 185 115 160 115 130 C 115 100 120 75 150 75 L 230 75 Z" fill="rgba(29, 61, 47, 0.45)" stroke="#72B58F" stroke-width="2" stroke-linejoin="round"/>
-              <rect x="208" y="55" width="30" height="22" fill="#2E4439" stroke="#9AD6B3" stroke-width="1.5"/>
-              <rect x="208" y="185" width="30" height="28" fill="#2E4439" stroke="#9AD6B3" stroke-width="1.5"/>
-              <rect x="216" y="105" width="14" height="110" fill="#B58534" stroke="#E5BE6C" stroke-width="1.5"/>
-              <line x1="216" y1="118" x2="230" y2="120" stroke="#FFFFFF" stroke-width="1"/>
-              <line x1="216" y1="130" x2="230" y2="132" stroke="#FFFFFF" stroke-width="1"/>
-              <line x1="216" y1="142" x2="230" y2="144" stroke="#FFFFFF" stroke-width="1"/>
-              <line x1="216" y1="154" x2="230" y2="156" stroke="#FFFFFF" stroke-width="1"/>
-              <ellipse cx="223" cy="101" rx="12" ry="4" fill="#D3DED8" stroke="#FFFFFF" stroke-width="1.5"/>
-              <line x1="175" y1="230" x2="270" y2="230" stroke="#E0EBE4" stroke-width="3.5" stroke-linecap="round"/>
-              <circle cx="175" cy="230" r="3.5" fill="#B58534"/>
-              <circle cx="270" cy="230" r="3.5" fill="#B58534"/>
-              <line x1="235" y1="101" x2="275" y2="88" stroke="#72B58F" stroke-width="1"/>
-              <text x="280" y="91" fill="#9AD6B3" font-family="'JetBrains Mono', monospace" font-size="8">Swivel Pad</text>
-              <line x1="230" y1="144" x2="275" y2="144" stroke="#72B58F" stroke-width="1"/>
-              <text x="280" y="147" fill="#9AD6B3" font-family="'JetBrains Mono', monospace" font-size="8">Steel Spindle</text>
-            </svg>
           </div>
         </div>
 
-        <!-- Clamp Photo Gallery Placeholders -->
+        <!-- Lower Grid: Clamp Photo Gallery Slots -->
         <div class="gallery-block-header">
           <div class="gallery-title-group">
             <span class="technical-chip">PRODUCT GALLERY</span>
@@ -522,25 +552,10 @@
             </div>
           </div>
         </div>
-
-        <!-- Availability Prompt: Location described as Chennai -->
-        <div class="availability-callout-banner" role="note">
-          <div class="banner-icon-col" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-          </div>
-          <div class="banner-text-col">
-            <strong>Check Current Clamp Availability:</strong>
-            <span>
-              To verify in-store stock, specific clamp sizes, and gauge details, please call the store directly at <a href="tel:+919445117929" class="banner-inline-link">094451 17929</a> prior to visiting our store in Chennai.
-            </span>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- 4. ABOUT BHAVANI TRADERS: Location described only as Chennai, no street address or postal code here -->
+    <!-- 5. ABOUT BHAVANI TRADERS: Location described only as Chennai, no street address or postal code here -->
     <section class="section-block about-details-section" id="about" aria-labelledby="about-heading">
       <div class="container">
         <!-- Section Header -->
@@ -570,7 +585,7 @@
               We prioritize direct, straightforward service. To confirm product availability or discuss clamp requirements for your work, call our store directly or visit during listed business hours.
             </p>
 
-            <!-- Distinct Business Entity Alert Box: Identifies Technetium Studios without full address or Plus Code -->
+            <!-- Distinct Business Entity Alert Box -->
             <div class="entity-notice-box" role="note">
               <div class="notice-badge">Separate Business Listing</div>
               <p>
@@ -579,7 +594,7 @@
             </div>
           </div>
 
-          <!-- Right Column: Scannable Store Details Datasheet (Location described only as Chennai) -->
+          <!-- Right Column: Scannable Store Details Datasheet -->
           <aside class="datasheet-card" aria-label="Store Specifications">
             <div class="datasheet-header">
               <span class="datasheet-tag">BUSINESS SPECIFICATIONS</span>
@@ -632,7 +647,7 @@
       </div>
     </section>
 
-    <!-- 5. CUSTOMER REVIEW -->
+    <!-- 6. CUSTOMER REVIEW -->
     <section class="section-block customer-review-section" id="review" aria-labelledby="review-heading">
       <div class="container review-container">
         <div class="section-header-stack" style="text-align: center; align-items: center;">
@@ -672,7 +687,7 @@
       </div>
     </section>
 
-    <!-- 6. GET DIRECTIONS SECTION (The EXACTLY ONE visible place showing the full street address) -->
+    <!-- 7. GET DIRECTIONS SECTION (The EXACTLY ONE visible place showing the full street address) -->
     <section class="section-block visit-store-section" id="directions" aria-labelledby="directions-heading">
       <div class="container">
         <!-- Section Header -->
@@ -681,7 +696,6 @@
             <span class="technical-chip">Location &amp; Navigation</span>
             <span class="section-rule-marker" aria-hidden="true"></span>
           </div>
-          <!-- Required Heading -->
           <h2 id="directions-heading" class="section-headline">
             Get directions
           </h2>
@@ -834,7 +848,7 @@
     </section>
   </main>
 
-  <!-- 7. FOOTER: Aligned layout, location only as Chennai, no full address, postal code or Plus code -->
+  <!-- 8. FOOTER: Aligned layout, location only as Chennai, no full address, postal code or Plus code -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-container">
       <div class="footer-main-grid">
@@ -868,7 +882,7 @@
           </ul>
         </div>
 
-        <!-- Store Location Column (Only Chennai, no full address, no postal code, no Plus Code) -->
+        <!-- Store Location Column (Only Chennai) -->
         <div class="footer-contact-column">
           <span class="footer-column-heading">Store Location</span>
           <address class="footer-address-block">
