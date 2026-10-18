@@ -7,6 +7,7 @@
  * - Full respect for prefers-reduced-motion
  */
 
+import * as THREE from 'three';
 import { sound } from './sound.js';
 
 export class ClampVisualizer {
@@ -41,31 +42,28 @@ export class ClampVisualizer {
     this.init();
   }
 
-  async init() {
+  init() {
     this.setupListeners();
 
-    // Try loading Three.js from CDN
     try {
-      const THREE = await this.loadThreeJS();
-      if (THREE) {
+      if (typeof THREE !== 'undefined' && this.isWebGLSupported()) {
         this.initThree(THREE);
         return;
       }
-    } catch {
-      // Fallback below
+    } catch (err) {
+      console.warn('WebGL / Three.js initialization fallback:', err);
     }
 
     // Fallback to high-precision procedural 2.5D Canvas
     this.initCanvasFallback();
   }
 
-  async loadThreeJS() {
-    if (window.THREE) return window.THREE;
+  isWebGLSupported() {
     try {
-      const module = await import('https://unpkg.com/three@0.160.0/build/three.module.js');
-      return module;
+      const testCanvas = document.createElement('canvas');
+      return !!(window.WebGLRenderingContext && (testCanvas.getContext('webgl') || testCanvas.getContext('experimental-webgl')));
     } catch {
-      return null;
+      return false;
     }
   }
 
